@@ -54,7 +54,7 @@ const ProductDetails: React.FC = () => {
             <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>
               {title}
             </h1>
-            <div className='text-xl text-red-500 font-medium mb-6'>
+            <div className='text-xl text-primary font-medium mb-6'>
               $ {price}
             </div>
             <p className='mb-8'>{description}</p>

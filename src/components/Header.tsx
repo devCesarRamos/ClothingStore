@@ -43,14 +43,14 @@ const Header: React.FC = () => {
         {/* Link to the home page with the logo */}
         <Link to="/">
           <div>
-            <img className="w-[40px]" src={Logo} alt="" />
+            <img className="w-[40px]" src={Logo} alt="Homepage" />
           </div>
         </Link>
         {/* Bag icon to open the sidebar and display the total number of items in the cart */}
         <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer flex relative">
           <BsBag className="text-2xl" />
           {/* Display the total number of items in the cart with a red badge */}
-          <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+          <div className="bg-primary absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
             {itemAmount}
           </div>
         </div>

@@ -15,7 +15,7 @@ const CartItem: React.FC<{ item: Product }> = ({ item }) => {
       <div className='w-full min-h-150 flex items-center gap-x-4'>
         {/* Link to the product details page */}
         <Link to={`/product/${id}`}>
-          <img className='max-w-[80px]' src={image} alt='' />
+          <img className='max-w-[80px]' src={image} alt={title} />
         </Link>
         <div className='w-full flex flex-col'>
           <div className='flex justify-between mb-2'>
@@ -33,13 +33,13 @@ const CartItem: React.FC<{ item: Product }> = ({ item }) => {
           </div>
           <div className='flex gap-x-2 h-[36px] text-sm'>
             {/* Quantity control with decrease, current amount, and increase buttons */}
-            <div className='flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium'>
+            <div className='flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium lg:rounded-lg'>
               <div onClick={() => decreaseAmount(id)} className='flex-1 flex justify-center items-center cursor-pointer h-full'>
-                <IoMdRemove />
+                <IoMdRemove className='text-gray-500 hover:text-red-500 transition' />
               </div>
               <div className='h-full flex justify-center items-center px-2'>{amount}</div>
               <div onClick={() => increaseAmount(id)} className='flex-1 h-full flex justify-center items-center cursor-pointer'>
-                <IoMdAdd />
+                <IoMdAdd className='text-gray-500 hover:text-black transition'/>
               </div>
             </div>
             {/* Display the price of a single item */}

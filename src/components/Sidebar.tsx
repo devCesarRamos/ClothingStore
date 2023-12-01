@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
         <div
           onClick={handleClose}
           className='cursor-pointer w-8 h-8 flex justify-center items-center'>
-          <IoMdArrowForward className='text-2xl' />
+          <IoMdArrowForward className='text-2xl text-gray-500 hover:text-black transition' />
         </div>
       </div>
       {/* Cart items section */}
@@ -50,21 +50,15 @@ const Sidebar: React.FC = () => {
           </div>
           <div
             onClick={clearCart}
-            className='cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl'>
+            className='cursor-pointer py-4 text-black w-12 h-12 flex justify-center items-center text-xl lg:rounded-lg hover:text-red-500 transition'>
             <FiTrash2 />
           </div>
         </div>
-        {/* Link to view cart */}
-        <Link
-          to={'/'}
-          className='bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium'>
-          View cart
-        </Link>
         {/* Link to checkout */}
         <Link
           to={'/'}
-          className='bg-primary flex p-4 justify-center items-center text-white w-full font-medium'>
-          Checkout
+          className='bg-primary flex p-4 justify-center items-center text-white w-full font-medium lg:rounded-lg'>
+          Go To Checkout
         </Link>
       </div>
     </div>

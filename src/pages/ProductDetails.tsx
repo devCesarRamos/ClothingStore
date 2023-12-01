@@ -47,22 +47,22 @@ const ProductDetails: React.FC = () => {
         <div className='flex flex-col lg:flex-row items-center'>
           {/* Display product image */}
           <div className='flex flex-1 justify-center items-center mb-8 lg:mb-0'>
-            <img className='max-w-[200px] lg:max-w-sm' src={image} alt="" />
+            <img className='max-w-[200px] lg:max-w-sm' src={image} alt={title} />
           </div>
           {/* Display product details and add to cart button */}
           <div className='flex-1 text-center lg:text-left'>
             <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>
               {title}
             </h1>
-            <div className='text-xl text-primary font-medium mb-6'>
+            <div className='text-xl text-primary mb-6'>
               $ {price}
             </div>
             <p className='mb-8'>{description}</p>
             <button 
               onClick={() => addToCart(product, product.id)} 
-              className='bg-primary py-4 px-8 text-white'
+              className='bg-primary font-semibold py-4 px-8 text-white rounded-lg'
             >
-              Add to cart
+              Add To Cart
             </button>
           </div>
         </div>

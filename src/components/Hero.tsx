@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
         </div>
         {/* Section with an image (visible only on larger screens) */}
         <div className='hidden lg:block'>
-          <img src={WomanImg} alt="" />
+          <img src={WomanImg} alt="WomanImg" />
         </div>
       </div>
     </section>
